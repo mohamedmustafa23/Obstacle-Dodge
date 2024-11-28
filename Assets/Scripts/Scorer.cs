@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Scorer : MonoBehaviour
 {
-    int hits = 0;
+    public int hits = 0;
     private void OnCollisionEnter(Collision other)
     {
 
@@ -11,6 +11,12 @@ public class Scorer : MonoBehaviour
             hits++;
             Debug.Log("You have bumped into a thing this many times: " + hits);
         }
+       
+    }
+    public int GetHits()
+    {
+        return hits;
     }
 
 }
+
